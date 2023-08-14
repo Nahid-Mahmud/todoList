@@ -1,24 +1,9 @@
-"use strict";
-
-// creating todo template
-
-document.querySelector("#submit").addEventListener("click", function () {
-  const listContainer = document.createElement("section");
-  // console.log(listContainer);
-  listContainer.innerHTML = `<div class="collapse collapse-arrow bg-base-200">
-  <input type="radio" name="my-accordion-2" checked="checked" />
-  <div class="collapse-title text-xl font-medium" id="heading">
-    Click to open this one and close others
-  </div>
-  <div class="collapse-content">
-    <p id="description">hello</p>
-    <div class="text-center md:text-right">
-      <button class="completed-task btn btn-primary capitalize">
-        Task Completed
-      </button>
-    </div>
-  </div>
-</div>`;
-  console.log(listContainer);
-  document.querySelector("#accordian-container").appendChild(listContainer);
+document.getElementById("submit").addEventListener("click", function () {
+  const inputValue = document.querySelector("#user-input").value;
+  // console.log(inputValue);
+  const li = document.createElement("li");
+  // console.log(li);
+  li.innerText = inputValue;
+  // console.log(li)
+  document.querySelector("#list-container").appendChild(li);
 });

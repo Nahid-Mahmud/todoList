@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+<!-- custom css  -->
+<link rel="stylesheet" href="./styles.css">
     <!-- daisy ui  -->
 
     <link
@@ -13,63 +14,29 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="max-w-[90vw] mx-auto">
+  <body class="max-w-[90vw] mx-auto" id="list-container">
     <header class="max-w-[50vw] mx-auto">
       <h1 class="text-center m-8 md:m-14 text-4xl font-bold capitalize">
         Organize Your tasks
       </h1>
       <div class="w-full h-[.1rem] bg-slate-700"></div>
     </header>
-    <main class="max-w-[60rem] mx-auto">
-      <!-- acccordan Container  -->
-      <section
-        id="accordian-container"
-        class="flex flex-col max-w-[60rem] mx-auto m-10 md:m-20 md:mx-auto gap-5 md:gap-10"
-      >
-        <!-- no 1 -->
-        <!-- <div class="collapse collapse-arrow bg-base-200">
-          <input type="radio" name="my-accordion-2" checked="checked" />
-          <div class="collapse-title text-xl font-medium" id="heading">
-            Click to open this one and close others
-          </div>
-          <div class="collapse-content">
-            <p id="description">hello</p>
-            <div class="text-center md:text-right">
-              <button class="completed-task btn btn-primary capitalize">
-                Task Completed
-              </button>
-            </div>
-          </div>
-        </div> -->
-      </section>
-      <!-- section form  -->
-      <section class="flex flex-col gap-5">
-        <h2 class="capitalize text-2xl font-medium">heading</h2>
-        <input
-          type="text"
-          placeholder="Type here"
-          class="input input-bordered w-full max-w-xs"
-          id="heading-input"
-        />
-        <h2 class="capitalize my-2 text-2xl font-medium">Describe Your Task</h2>
-        <textarea
-          name=""
-          id="description-input"
-          cols="25"
-          rows="5"
-          placeholder="Enter Description"
-          class="max-w-lg"
-          style="
-            border: 1px solid rgb(179, 172, 172);
-            border-radius: 1rem;
-            padding: 1rem;
-          "
-        ></textarea>
-        <button class="btn-primary btn max-w-[10rem]" id="submit">
-          Submit
-        </button>
-      </section>
-    </main>
+    <!-- section form  -->
+    <section class="flex gap-5 my-6 justify-center">
+      <input
+        type="text"
+        placeholder="Type here"
+        class="input input-bordered w-full max-w-xs"
+        id="user-input"
+      />
+      <button class="btn-primary btn max-w-[10rem]" id="submit">Submit</button>
+    </section>
+    <!-- ul li section  -->
+    <section>
+      <ul id="list-container" class="flex justify-center list-none">
+        <li> This is demo text</li>
+      </ul>
+    </section>
     <script src="main.js"></script>
   </body>
 </html>
