@@ -13,35 +13,63 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body>
+  <body class="max-w-[90vw] mx-auto">
     <header class="max-w-[50vw] mx-auto">
       <h1 class="text-center m-8 md:m-14 text-4xl font-bold capitalize">
         Organize Your tasks
       </h1>
       <div class="w-full h-[.1rem] bg-slate-700"></div>
     </header>
-    <main class="max-w-[90vw] mx-auto">
+    <main class="max-w-[60rem] mx-auto">
       <!-- acccordan Container  -->
       <section
         id="accordian-container"
         class="flex flex-col max-w-[60rem] mx-auto m-10 md:m-20 md:mx-auto gap-5 md:gap-10"
       >
         <!-- no 1 -->
-        <div class="collapse collapse-arrow bg-base-200">
+        <!-- <div class="collapse collapse-arrow bg-base-200">
           <input type="radio" name="my-accordion-2" checked="checked" />
-          <div class="collapse-title text-xl font-medium">
+          <div class="collapse-title text-xl font-medium" id="heading">
             Click to open this one and close others
           </div>
           <div class="collapse-content">
-            <p>hello</p>
+            <p id="description">hello</p>
             <div class="text-center md:text-right">
               <button class="completed-task btn btn-primary capitalize">
                 Task Completed
               </button>
             </div>
           </div>
-        </div>
+        </div> -->
+      </section>
+      <!-- section form  -->
+      <section class="flex flex-col gap-5">
+        <h2 class="capitalize text-2xl font-medium">heading</h2>
+        <input
+          type="text"
+          placeholder="Type here"
+          class="input input-bordered w-full max-w-xs"
+          id="heading-input"
+        />
+        <h2 class="capitalize my-2 text-2xl font-medium">Describe Your Task</h2>
+        <textarea
+          name=""
+          id="description-input"
+          cols="25"
+          rows="5"
+          placeholder="Enter Description"
+          class="max-w-lg"
+          style="
+            border: 1px solid rgb(179, 172, 172);
+            border-radius: 1rem;
+            padding: 1rem;
+          "
+        ></textarea>
+        <button class="btn-primary btn max-w-[10rem]" id="submit">
+          Submit
+        </button>
       </section>
     </main>
+    <script src="main.js"></script>
   </body>
 </html>
