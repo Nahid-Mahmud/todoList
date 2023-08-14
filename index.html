@@ -14,6 +14,34 @@
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
   <body>
-    <h1 class="text-3xl font-bold underline bg-purple-400">Hello world!</h1>
+    <header class="max-w-[50vw] mx-auto">
+      <h1 class="text-center m-8 md:m-14 text-4xl font-bold capitalize">
+        Organize Your tasks
+      </h1>
+      <div class="w-full h-[.1rem] bg-slate-700"></div>
+    </header>
+    <main class="max-w-[90vw] mx-auto">
+      <!-- acccordan Container  -->
+      <section
+        id="accordian-container"
+        class="flex flex-col max-w-[60rem] mx-auto m-10 md:m-20 md:mx-auto gap-5 md:gap-10"
+      >
+        <!-- no 1 -->
+        <div class="collapse collapse-arrow bg-base-200">
+          <input type="radio" name="my-accordion-2" checked="checked" />
+          <div class="collapse-title text-xl font-medium">
+            Click to open this one and close others
+          </div>
+          <div class="collapse-content">
+            <p>hello</p>
+            <div class="text-center md:text-right">
+              <button class="completed-task btn btn-primary capitalize">
+                Task Completed
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
   </body>
 </html>
