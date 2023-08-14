@@ -3,8 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<!-- custom css  -->
-<link rel="stylesheet" href="./styles.css">
+    <!-- custom css  -->
+    <link rel="stylesheet" href="./styles.css" />
     <!-- daisy ui  -->
 
     <link
@@ -14,14 +14,19 @@
     />
     <script src="https://cdn.tailwindcss.com"></script>
   </head>
-  <body class="max-w-[90vw] mx-auto" id="list-container">
+  <body class="max-w-[90vw] mx-auto">
     <header class="max-w-[50vw] mx-auto">
-      <h1 class="text-center m-8 md:m-14 text-4xl font-bold capitalize">
+      <h1
+        class="text-center m-8 md:m-14 md:text-4xl text-2xl font-bold capitalize"
+      >
         Organize Your tasks
       </h1>
       <div class="w-full h-[.1rem] bg-slate-700"></div>
     </header>
     <!-- section form  -->
+    <p class="capitalize text-xl md:2xl text-center mt-6 font-semibold">
+      ckick on your task to remove after completed
+    </p>
     <section class="flex gap-5 my-6 justify-center">
       <input
         type="text"
@@ -29,12 +34,19 @@
         class="input input-bordered w-full max-w-xs"
         id="user-input"
       />
-      <button class="btn-primary btn max-w-[10rem]" id="submit">Submit</button>
+      <button class="btn-primary btn max-w-[10rem]" id="submit" disabled>Submit</button>
     </section>
     <!-- ul li section  -->
     <section>
-      <ul id="list-container" class="flex justify-center list-none">
-        <li> This is demo text</li>
+      <ul
+        id="list-container"
+        class="flex justify-center list-none flex-col text-center"
+      >
+        <li
+          class="listItem w-[max-content] text-xl px-4 py-4 rounded-md text-center flex flex-col bg-slate-400"
+        >
+          This is demo text
+        </li>
       </ul>
     </section>
     <script src="main.js"></script>
