@@ -31,7 +31,7 @@ document.getElementById("submit").addEventListener("click", function () {
   // console.log(li);
   li.innerText = inputValue;
   // console.log(li)
-
+  document.querySelector("#user-input").value = "";
   document.querySelector("#list-container").appendChild(li);
 });
 
